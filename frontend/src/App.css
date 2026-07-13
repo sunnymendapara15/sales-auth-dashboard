@@ -1,0 +1,222 @@
+.app-shell {
+  min-height: 100vh;
+  background: #f6f8fb;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: #0b1f3a;
+  color: #ffffff;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.app-header p {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.app-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.app-nav a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.app-nav a.active,
+.app-nav a:hover {
+  color: #6dd0ff;
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem 1.5rem 3rem;
+}
+
+.form-panel {
+  background: #ffffff;
+  margin: 0 auto;
+  max-width: 480px;
+  padding: 2rem;
+  border-radius: 14px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.15);
+}
+
+.form-panel h2 {
+  margin-top: 0;
+}
+
+.form-panel p {
+  color: #5c6370;
+  margin-top: 0.25rem;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-field label {
+  font-weight: 600;
+}
+
+.form-field input,
+.form-field select {
+  border: 1px solid #d6dbea;
+  border-radius: 10px;
+  padding: 0.75rem 0.9rem;
+  font-size: 1rem;
+  background: #fdfdfd;
+}
+
+.primary,
+.secondary {
+  border: none;
+  padding: 0.85rem 1.6rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary {
+  background: #0b1f3a;
+  color: #ffffff;
+}
+
+.primary:disabled {
+  background: #2d4765;
+  cursor: wait;
+}
+
+.secondary {
+  background: #ffffff;
+  color: #0b1f3a;
+  border: 1px solid #d6dbea;
+}
+
+.message {
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  background: #eef2ff;
+  color: #1d3c73;
+  margin-bottom: 1rem;
+}
+
+.message.error {
+  background: #fdecea;
+  color: #a12a2a;
+}
+
+.message.success {
+  background: #edf9ef;
+  color: #1f7a3b;
+}
+
+.panel {
+  margin: 0 auto;
+  max-width: 900px;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+.panel-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.user-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.form-actions {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.users-table {
+  margin-top: 2rem;
+}
+
+.users-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.users-table th,
+.users-table td {
+  padding: 0.85rem 0.75rem;
+  text-align: left;
+  border-bottom: 1px solid #e4e8f1;
+  font-size: 0.95rem;
+}
+
+.users-table th:last-child,
+.users-table td:last-child {
+  width: 160px;
+}
+
+.table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.table-actions button {
+  flex: 1;
+  padding: 0.45rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #d6dbea;
+  background: #ffffff;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.table-actions button:hover {
+  border-color: #0b1f3a;
+}
+
+.table-actions button:first-child {
+  color: #0b1f3a;
+}
+
+@media (max-width: 720px) {
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user-form {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    padding: 1.5rem;
+  }
+}
